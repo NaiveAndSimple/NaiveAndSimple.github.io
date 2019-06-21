@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="角色装备系统策划案 作者：LH 创建日期：20190507 最后修改日期：20190507 版本号：1.0 一．角色装备系统目的二．角色装备系统系统功能规则三．系统表现四．系统关联五．程序逻辑流程图六．数据配置表 一．角色装备系统目的   在此系统，玩家可对获取到的角色穿戴装备、强化装备，以及展示一些角色基本信息。同时以排行榜、战力评分、属性数值显示等数据激发玩家养成兴趣与快感，提升用户粘性，进而">
+<meta property="og:type" content="article">
+<meta property="og:title" content="角色装备系统策划案">
+<meta property="og:url" content="http://yoursite.com/2019/05/07/人物装备系统策划案/index.html">
+<meta property="og:site_name" content="NaiveAndSimple">
+<meta property="og:description" content="角色装备系统策划案 作者：LH 创建日期：20190507 最后修改日期：20190507 版本号：1.0 一．角色装备系统目的二．角色装备系统系统功能规则三．系统表现四．系统关联五．程序逻辑流程图六．数据配置表 一．角色装备系统目的   在此系统，玩家可对获取到的角色穿戴装备、强化装备，以及展示一些角色基本信息。同时以排行榜、战力评分、属性数值显示等数据激发玩家养成兴趣与快感，提升用户粘性，进而">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/07/人物装备系统策划案/jiemianguanxi.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/07/人物装备系统策划案/UI.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/07/人物装备系统策划案/zbui.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/07/人物装备系统策划案/liuchengtu.png">
+<meta property="og:updated_time" content="2019-05-15T09:55:14.800Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="角色装备系统策划案">
+<meta name="twitter:description" content="角色装备系统策划案 作者：LH 创建日期：20190507 最后修改日期：20190507 版本号：1.0 一．角色装备系统目的二．角色装备系统系统功能规则三．系统表现四．系统关联五．程序逻辑流程图六．数据配置表 一．角色装备系统目的   在此系统，玩家可对获取到的角色穿戴装备、强化装备，以及展示一些角色基本信息。同时以排行榜、战力评分、属性数值显示等数据激发玩家养成兴趣与快感，提升用户粘性，进而">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/07/人物装备系统策划案/jiemianguanxi.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/07/人物装备系统策划案/">
+
+
+
+
+
+  <title>角色装备系统策划案 | NaiveAndSimple</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NaiveAndSimple</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/人物装备系统策划案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Long Haul">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NaiveAndSimple">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">角色装备系统策划案</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T22:10:39+08:00">
+                2019-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>角色装备系统策划案</strong></p>
+<p><strong>作者：LH</strong></p>
+<p><strong>创建日期：20190507</strong></p>
+<p><strong>最后修改日期：20190507</strong></p>
+<p><strong>版本号：1.0</strong></p>
+<p><a href="#1">一．角色装备系统目的</a><br><a href="#2">二．角色装备系统系统功能规则</a><br><a href="#3">三．系统表现</a><br><a href="#4">四．系统关联</a><br><a href="#5">五．程序逻辑流程图</a><br><a href="#6">六．数据配置表</a></p>
+<h1 id="一．角色装备系统目的"><a href="#一．角色装备系统目的" class="headerlink" title="一．角色装备系统目的"></a><a name="1">一．角色装备系统目的</a></h1><blockquote>
+<p>  在此系统，玩家可对获取到的角色穿戴装备、强化装备，以及展示一些角色基本信息。同时以排行榜、战力评分、属性数值显示等数据激发玩家养成兴趣与快感，提升用户粘性，进而提高用户留存，增加流水与收入。</p>
+</blockquote>
+<h1 id="二．角色装备系统功能规则"><a href="#二．角色装备系统功能规则" class="headerlink" title="二．角色装备系统功能规则"></a><a name="2">二．角色装备系统功能规则</a></h1><h2 id="2-1-角色选择界面规则"><a href="#2-1-角色选择界面规则" class="headerlink" title="2.1 角色选择界面规则"></a><strong>2.1</strong> 角色选择界面规则</h2><h3 id="2-1-1-入口与出口"><a href="#2-1-1-入口与出口" class="headerlink" title="2.1.1 入口与出口"></a>2.1.1 入口与出口</h3><p>入口：从游戏主界面右上方地图信息展示模块，右下方“角色”图标进入，触发方式为触摸屏点击。</p>
+<p>出口：选择角色选择界面展示画面左上方，有形如符号“\&lt;”的回退按键，点击触发，回退至游戏主界面</p>
+<h3 id="2-1-2-系统权限"><a href="#2-1-2-系统权限" class="headerlink" title="2.1.2 系统权限"></a>2.1.2 系统权限</h3><p>玩家达到6级之后显示；</p>
+<h3 id="2-1-3-界面展示内容"><a href="#2-1-3-界面展示内容" class="headerlink" title="2.1.3 界面展示内容"></a>2.1.3 界面展示内容</h3><ul>
+<li><p>在界面展示角色选择详情，展示内容详情包括：<br>角色品质信息，分级为甲、乙、丙、丁；(甲级为最高)</p>
+</li>
+<li><p>角色名称；</p>
+</li>
+<li><p>角色人物立绘；</p>
+</li>
+<li><p>角色所使用武器，分为长兵、短兵、拳脚、内功；</p>
+</li>
+<li><p>角色饱食度：显示该张角色卡剩余的饱食度，饱食度为0不可上场</p>
+</li>
+<li><p>角色战力；</p>
+</li>
+<li><p>角色出战状态：已出战/未出战</p>
+</li>
+</ul>
+<h2 id="2-2-角色装备玩法界面规则"><a href="#2-2-角色装备玩法界面规则" class="headerlink" title="2.2 角色装备玩法界面规则"></a><strong>2.2 角色装备玩法界面规则</strong></h2><h3 id="2-2-1-入口与出口"><a href="#2-2-1-入口与出口" class="headerlink" title="2.2.1 入口与出口"></a>2.2.1 入口与出口</h3><p>入口：点击角色开扇展示界面中的一张角色，进入到角色装备玩法详细界面。</p>
+<p>出口：在装备玩法界面左上方有形如“&lt;”的回退按键，点击即回退至角色选择概览界面</p>
+<h3 id="2-2-2-系统权限"><a href="#2-2-2-系统权限" class="headerlink" title="2.2.2 系统权限"></a>2.2.2 系统权限</h3><p>在玩家达到6级后，能进入角色选择概览界面，即可进入该界面</p>
+<h3 id="2-2-3-界面展示内容"><a href="#2-2-3-界面展示内容" class="headerlink" title="2.2.3 界面展示内容"></a>2.2.3 界面展示内容</h3><ul>
+<li><p>角色立绘</p>
+</li>
+<li><p>角色等级：显示任务等级，上限为30级</p>
+</li>
+<li><p>角色装备：包括武器、上装、头饰、腰带、下装、护手、鞋子。点击装备，显示装备详情，具体装备详情UI图可参考第三节，系统表现</p>
+</li>
+<li><p>角色活力：以1000/1000形式展示</p>
+</li>
+<li><p>角色属性：以五角星形式展现角色特性，属性详情，详细属性；</p>
+</li>
+<li><p>排行榜入口</p>
+</li>
+</ul>
+<h3 id="2-2-4-功能规则"><a href="#2-2-4-功能规则" class="headerlink" title="2.2.4 功能规则"></a>2.2.4 功能规则</h3><ul>
+<li><p>角色装备：包括武器、上装、头饰、腰带、下装、护手、鞋子。点击装备，显示装备详情。如装备强化未满级，在装备详情弹窗下方有“强化”二字入口，点击即进入装备强化界面</p>
+</li>
+<li><p>角色属性：以五角星形式展现角色特性，五个特性为：<strong>输出、机动、控制、辅助、生存</strong>；向下滑动，以文字形式详细显示属性详情；展示的字段（8个）为：<strong>力道、力道成长、身法、身法成长、元气、元气成长、根骨、根骨成长</strong>；再往下滑动，展示角色详细属性，字段（18个）包括：<strong>最大气血值、外功强度、外功破防、外功会心、外功会效、外功命中、内功强度、内功会心、内功会效、外功防御、内功防御、闪避、御劲、化劲、内劲上限、内劲回复、移动速度、治疗效果、被治疗效果</strong>。穿戴装备提升以上属性。</p>
+</li>
+<li><p>装备等级规则：角色满级为30级，装备可穿戴等级阈值为1级、5级、10级、15级、20级、25级、30级</p>
+</li>
+<li><p>装备获取规则：</p>
+<ul>
+<li><p>怪物掉落<br>怪物1~5级的野怪掉落1级、5级装备；<br>怪物6~10级的野怪掉落5级、10级装备；<br>怪物11~15级的野怪掉落10级、15级装备；<br>怪物16~20级的野怪掉落15级、20级装备；<br>怪物21~25级的野怪掉落20级、25级装备；<br>怪物26~30级的野怪掉落25级、30级装备</p>
+</li>
+<li><p>装备打造<br>打造所需资源：装备锻造图、金币、野怪掉落材料、修为、矿石，具体装备生成规则见装备锻造系统策划案</p>
+</li>
+</ul>
+</li>
+<li><p>武器详细分类：</p>
+<ul>
+<li>长兵：枪、鞭、棍</li>
+<li>短兵：刀、剑、匕首</li>
+<li>拳脚：手套</li>
+<li>内功：琴、扇</li>
+</ul>
+</li>
+<li><p>防具详细分类：</p>
+<ul>
+<li>布甲</li>
+<li>轻甲</li>
+<li>重甲</li>
+</ul>
+</li>
+<li><p>穿戴外观显示规则：<br>外观展示仅根据每个等级阈值发生变化，全部玩家装备同模</p>
+</li>
+</ul>
+<h1 id="三．系统表现"><a href="#三．系统表现" class="headerlink" title="三．系统表现"></a><a name="3">三．系统表现</a></h1><p>界面关系如下图：</p>
+<p><img src="/2019/05/07/人物装备系统策划案/jiemianguanxi.png" alt></p>
+<h2 id="3-1-角色-人物-选择概览界面UI"><a href="#3-1-角色-人物-选择概览界面UI" class="headerlink" title="3.1 角色(人物)选择概览界面UI"></a>3.1 角色(人物)选择概览界面UI</h2><p><img src="/2019/05/07/人物装备系统策划案/UI.png" alt></p>
+<p>界面展示的功能内容：</p>
+<ul>
+<li><p>界面退出按键：退出至游戏主界面按键，位于展示界面左上方；</p>
+</li>
+<li><p>界面名称：位于展示界面中部上方，显示该界面名称；</p>
+</li>
+<li><p>角色(人物)选择：界面主要展示内容。以扑克牌开扇方式展示玩家可解锁、已解锁的角色。其中，已获得的角色为彩色，未获得的角色为黑白色；按照获得顺序，依次展示角色，从左到右展示，已解锁角色优先展示；</p>
+</li>
+<li><p>角色(人物)概览信息展示：在扑克牌开扇方式展示的每一张角色中，展示角色的信息。角色具体展示的信息有：角色品质信息(甲、乙、丙、丁)、角色人物立绘、角色名称、角色所使用武器分类(长兵、短兵、拳脚、驭驶)、饱食度、是否出战、战力数值、等级，详细UI界面可参考UI界面提取图</p>
+</li>
+<li><p>角色(人物)筛选：在界面右上角，可以下拉框形式选择角色排序，排序方式有(按战力排序、按名称排序、按等级排序)。在界面下方，提供另外4中选择方式：全部、门派、破招、品质。其中，点击门派后，展示界面变暗，门派筛选条件上突出显示可供选择的门派(纯阳、天策、万花、七秀、少林)；点击破招后，展示界面变暗，破招筛选条件上突出显示可供选择的武器分类(长兵、短兵、拳脚、内功)；点击品质后，展示界面变暗，破招筛选条件上突出显示可供选择的角色品质(甲、乙、丙、丁)；</p>
+</li>
+</ul>
+<p><strong>界面交互逻辑:</strong></p>
+<p>界面退出按键：点击则退出至游戏待机主界面；</p>
+<p>角色人物选择：</p>
+<p>左滑：开扇角色向左滑动；</p>
+<p>右滑：开扇角色向右滑动；</p>
+<p>点击：根据角色大小判定落入哪张角色卡，进入角色卡详情查看界面，默认进入角色装备玩法界面；</p>
+<p>角色筛选：</p>
+<p>左上角筛选条件：(按战力排序、按名称排序、按等级排序)，根据玩家选择条件，排序角色并展示，优先级为优先展示已解锁角色；</p>
+<p>界面下方筛选条件：点击全部，即展示全部角色，优先级为从左到右展示已解锁、未解锁角色，按获得顺序排序；点击门派，即模糊侠客界面，横向，从左到右展示可选门派(纯阳、天策、万花、七秀、少林)；点击破招，即模糊侠客界面，横向，从左到右展示可选武器类型(长兵、短兵、拳脚、内功)；点击品质，即模糊侠客界面，横向，从左到右展示可选人物品质(甲、乙、丙、丁)；</p>
+<h2 id="3-2-角色-人物-装备界面UI"><a href="#3-2-角色-人物-装备界面UI" class="headerlink" title="3.2 角色(人物)装备界面UI "></a>3.2 角色(人物)装备界面UI </h2><p><img src="/2019/05/07/人物装备系统策划案/zbui.png" alt></p>
+<h1 id="四．系统关联"><a href="#四．系统关联" class="headerlink" title="四．系统关联"></a><a name="4">四．系统关联</a></h1><h2 id="4-1-背包系统"><a href="#4-1-背包系统" class="headerlink" title="4.1 背包系统"></a>4.1 背包系统</h2><p>可穿戴的装备必须存在于背包中</p>
+<p>与人物饱食度、好感度相关联，提升人物饱食度、好感度的物品都必须存在于背包</p>
+<h2 id="4-2-人物等级系统"><a href="#4-2-人物等级系统" class="headerlink" title="4.2 人物等级系统"></a>4.2 人物等级系统</h2><p>人物等级达到6级，才能获取装备穿戴系统的入口</p>
+<h2 id="4-3-主界面系统"><a href="#4-3-主界面系统" class="headerlink" title="4.3 主界面系统"></a>4.3 主界面系统</h2><p>在主界面上显示装备穿戴系统的入口</p>
+<h2 id="4-4-武器强化系统"><a href="#4-4-武器强化系统" class="headerlink" title="4.4 武器强化系统"></a>4.4 武器强化系统</h2><p>在武器装备界面，可以直接进入武器强化系统，对武器进行强化</p>
+<h2 id="4-5-武器强化资源合成系统"><a href="#4-5-武器强化资源合成系统" class="headerlink" title="4.5 武器强化资源合成系统"></a>4.5 武器强化资源合成系统</h2><p>在武器装备界面，如需获取更高等级武器强化资源，可直接进入武器强化资源合成系统</p>
+<h2 id="4-6-装备锻造系统"><a href="#4-6-装备锻造系统" class="headerlink" title="4.6 装备锻造系统"></a>4.6 装备锻造系统</h2><p>通过锻造方式获取新武器</p>
+<h1 id="五．程序逻辑流程图"><a href="#五．程序逻辑流程图" class="headerlink" title="五．程序逻辑流程图"></a><a name="5">五．程序逻辑流程图</a></h1><p><img src="/2019/05/07/人物装备系统策划案/liuchengtu.png" alt></p>
+<h1 id="六．数据配置表"><a href="#六．数据配置表" class="headerlink" title="六．数据配置表"></a><a name="6">六．数据配置表</a></h1><p>   <strong>数据配置表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>UUID</td>
+<td>唯一值,主键</td>
+</tr>
+<tr>
+<td>PIC</td>
+<td>TEXT</td>
+<td>图标路径</td>
+</tr>
+<tr>
+<td>LevelRequire</td>
+<td>INT</td>
+<td>穿戴等级</td>
+</tr>
+<tr>
+<td>WeaponName</td>
+<td>CHAR</td>
+<td>武器/装备名</td>
+</tr>
+<tr>
+<td>Descripition</td>
+<td>TEXT</td>
+<td>装备描述</td>
+</tr>
+<tr>
+<td>IsBound</td>
+<td>TINYINT</td>
+<td>是否绑定</td>
+</tr>
+<tr>
+<td>IsEnhance</td>
+<td>TINYINT</td>
+<td>是否可以强化</td>
+</tr>
+<tr>
+<td>EnhanceLevel</td>
+<td>TINYINT</td>
+<td>强化等级最高5级</td>
+</tr>
+<tr>
+<td>Score</td>
+<td>INT</td>
+<td>装备评分</td>
+</tr>
+<tr>
+<td>ExAttack</td>
+<td>INT</td>
+<td>外功强度数值</td>
+</tr>
+<tr>
+<td>InAttack</td>
+<td>INT</td>
+<td>内功强度数值</td>
+</tr>
+<tr>
+<td>Durability</td>
+<td>INT</td>
+<td>耐久度</td>
+</tr>
+<tr>
+<td>HPincrease</td>
+<td>INT</td>
+<td>血量数值</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>INT</td>
+<td>力道数值</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>INT</td>
+<td>身法数值</td>
+</tr>
+<tr>
+<td>Spirit</td>
+<td>INT</td>
+<td>元气数值</td>
+</tr>
+<tr>
+<td>Vitality</td>
+<td>INT</td>
+<td>根骨数值</td>
+</tr>
+<tr>
+<td>ExArmorPene</td>
+<td>INT</td>
+<td>外功破防</td>
+</tr>
+<tr>
+<td>ExCriticalHit</td>
+<td>INT</td>
+<td>外功会心</td>
+</tr>
+<tr>
+<td>ExCriticalMutiple</td>
+<td>INT</td>
+<td>外功会效</td>
+</tr>
+<tr>
+<td>ExHitRate</td>
+<td>INT</td>
+<td>外功命中</td>
+</tr>
+<tr>
+<td>InArmorPene</td>
+<td>INT</td>
+<td>内功破防</td>
+</tr>
+<tr>
+<td>InCriticalHit</td>
+<td>INT</td>
+<td>内功会心</td>
+</tr>
+<tr>
+<td>InCriticalMutiple</td>
+<td>INT</td>
+<td>内功会效</td>
+</tr>
+<tr>
+<td>InHitRate</td>
+<td>INT</td>
+<td>内功命中</td>
+</tr>
+<tr>
+<td>ExDefense</td>
+<td>INT</td>
+<td>外功防御数值</td>
+</tr>
+<tr>
+<td>InDefense</td>
+<td>INT</td>
+<td>内功防御数值</td>
+</tr>
+<tr>
+<td>Mitigation</td>
+<td>INT</td>
+<td>化劲百分比减伤</td>
+</tr>
+<tr>
+<td>AntiCritical</td>
+<td>INT</td>
+<td>御劲减少被会心几率</td>
+</tr>
+<tr>
+<td>Miss</td>
+<td>INT</td>
+<td>闪避几率</td>
+</tr>
+<tr>
+<td>SelfDefineAttr1</td>
+<td>TINYINT</td>
+<td>宝石镶嵌孔属性值1,是否嵌入宝石</td>
+</tr>
+<tr>
+<td>SelfDefineAttr2</td>
+<td>TINYINT</td>
+<td>宝石镶嵌孔属性值2,是否嵌入宝石</td>
+</tr>
+<tr>
+<td>SelfDefineAttr3</td>
+<td>TINYINT</td>
+<td>宝石镶嵌孔属性值3,是否嵌入宝石</td>
+</tr>
+<tr>
+<td>Expend1</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend2</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend3</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend4</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend5</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend6</td>
+<td>INT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend7</td>
+<td>CHAR</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend8</td>
+<td>CHAR</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend9</td>
+<td>CHAR</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend10</td>
+<td>CHAR</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend11</td>
+<td>TEXT</td>
+<td>预留拓展字段</td>
+</tr>
+<tr>
+<td>Expend12</td>
+<td>TEXT</td>
+<td>预留拓展字段</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/13/vue-express-mysql-nginx项目部署/" rel="prev" title="vue+express+mysql+nginx项目部署">
+                vue+express+mysql+nginx项目部署 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Long Haul</p>
+              <p class="site-description motion-element" itemprop="description">个人博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/naiveandsimple" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1810532369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一．角色装备系统目的"><span class="nav-number">1.</span> <span class="nav-text">一．角色装备系统目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二．角色装备系统功能规则"><span class="nav-number">2.</span> <span class="nav-text">二．角色装备系统功能规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-角色选择界面规则"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 角色选择界面规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-入口与出口"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 入口与出口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-系统权限"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 系统权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-界面展示内容"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 界面展示内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-角色装备玩法界面规则"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 角色装备玩法界面规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-入口与出口"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 入口与出口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-系统权限"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 系统权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-界面展示内容"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3 界面展示内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-4-功能规则"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4 功能规则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三．系统表现"><span class="nav-number">3.</span> <span class="nav-text">三．系统表现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-角色-人物-选择概览界面UI"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 角色(人物)选择概览界面UI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-角色-人物-装备界面UI"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 角色(人物)装备界面UI </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四．系统关联"><span class="nav-number">4.</span> <span class="nav-text">四．系统关联</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-背包系统"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 背包系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-人物等级系统"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 人物等级系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-主界面系统"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 主界面系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-武器强化系统"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 武器强化系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-武器强化资源合成系统"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 武器强化资源合成系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-装备锻造系统"><span class="nav-number">4.6.</span> <span class="nav-text">4.6 装备锻造系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五．程序逻辑流程图"><span class="nav-number">5.</span> <span class="nav-text">五．程序逻辑流程图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六．数据配置表"><span class="nav-number">6.</span> <span class="nav-text">六．数据配置表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Long Haul</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
